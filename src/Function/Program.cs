@@ -13,15 +13,6 @@ namespace Function {
 
         public string BookFlight(string input, IHTTPContext ctx) 
         {
-            string ret = "This was invoked via CLI" ;
-            if (!ctx.Equals(null))
-            {
-                ret = ctx.RequestMethod();
-                
-            }
-
-            return ret;
-            /*
             try
             {
                 JsonSerializerOptions options = new JsonSerializerOptions { WriteIndented = true };
@@ -31,9 +22,9 @@ namespace Function {
             }
             catch (Exception ex) {
                 JsonSerializerOptions options = new JsonSerializerOptions { WriteIndented = true };
+                ctx.SetStatus(402);
                 return JsonSerializer.Serialize(new FlightError(), options);
             }
-            */
         }
 
         static void Main(string[] args) { Fdk.Handle(args[0]) ;}

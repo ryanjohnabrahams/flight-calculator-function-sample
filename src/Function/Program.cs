@@ -11,9 +11,9 @@ using Fnproject.Fn.Fdk.Context;
 namespace Function {
     public class FlightBooker {       
 
-        public dynamic BookFlight(string input, IHTTPContext ctx)  //dynamic ctx
+        public string BookFlight(string input, IHTTPContext ctx) 
         {
-            return ctx.GetType();//ctx.GetType();
+            return input.GetType().ToString();//ctx.GetType();
             /*
             try
             {
@@ -27,6 +27,11 @@ namespace Function {
                 return JsonSerializer.Serialize(new FlightError(), options);
             }
             */
+        }
+
+        public string BookFlight(string input, IRuntimeContext ctx)
+        {
+            return "This function is not designed to run via CLI";
         }
 
         static void Main(string[] args) { Fdk.Handle(args[0]) ;}

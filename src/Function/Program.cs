@@ -11,7 +11,7 @@ using Fnproject.Fn.Fdk.Context;
 namespace Function {
     public class FlightBooker {       
 
-        public string BookFlight(string input, IHTTPContext ctx) 
+        public string BookFlight(string input, IHTTPContext ctx, IRuntimeContext rCtx) 
         {
             
             return ctx.RequestMethod();//ctx.GetType();

@@ -13,7 +13,8 @@ namespace Function {
 
         public string BookFlight(string input, IHTTPContext ctx) 
         {
-            return input.GetType().ToString();//ctx.GetType();
+            
+            return ctx.RequestMethod();//ctx.GetType();
             /*
             try
             {

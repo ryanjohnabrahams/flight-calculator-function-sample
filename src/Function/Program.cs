@@ -13,7 +13,7 @@ namespace Function {
 
         public dynamic BookFlight(string input)  //dynamic ctx
         {
-            return "Something";//ctx.GetType();
+            return input.GetType();//ctx.GetType();
             /*
             try
             {

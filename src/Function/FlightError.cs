@@ -4,11 +4,10 @@ namespace Function
 {
     public class FlightError
     {
-        [JsonPropertyName("errorCode")]
-        public int ErrorCode { get => 402;  }
-        [JsonPropertyName("errorDescription")]
-        public string ErrorDescription { get => "Bad Request"; }
-
+        [JsonPropertyName("error")]
+        public string Error { get => "Bad Request"; }
+        [JsonPropertyName("message")]
+        public string Message { get; set; }
 
     }
 }

@@ -22,8 +22,9 @@ namespace Function {
             }
             catch (Exception ex) {
                 JsonSerializerOptions options = new JsonSerializerOptions { WriteIndented = true };
-                ctx.SetStatus(402);
-                return JsonSerializer.Serialize(new FlightError(), options);
+                ctx.SetStatus(400);
+                FlightError fe = new FlightError { Message = "You gave me: " + input };
+                return JsonSerializer.Serialize(fe, options);
             }
         }
 

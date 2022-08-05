@@ -7,7 +7,7 @@ using System.Text.Json.Serialization;
 namespace Function.Tests {
     public class FlightBookerTest
     {
-        [Test]
+        /*[Test]
         public void GivenValidJsonShouldReturnValidJson()
         {
             string inJson = "{\"firstName\": \"Ted\",\"lastName\": \"Cruz\",\"business\": \"Cancun Cruzes\",\"lines\":[{\"destination\": \"anywhere but texas\",\"returnTrip\": false,\"price\": 895.95},{\"destination\": \"Montana\",\"returnTrip\": true,\"price\": 1024.20}]}";
@@ -23,9 +23,9 @@ namespace Function.Tests {
             var fo = JsonSerializer.Deserialize<FlightOutputTest>(flightBooker.BookFlight(inJson));
 
             Assert.IsTrue(fo.Equals(ft));
-        }
+        }*/
 
-        [Test]
+        /*[Test]
         public void GivenGuffShouldReturnError()
         {
             FlightBooker flightBooker = new FlightBooker();
@@ -36,5 +36,6 @@ namespace Function.Tests {
             Assert.IsTrue(err.ErrorCode == 402);
             Assert.IsTrue(err.ErrorDescription.Equals("Bad Request"));
         }
+        */
     }
 }

@@ -9,28 +9,12 @@ using Fnproject.Fn.Fdk.Context;
 
 [assembly:InternalsVisibleTo("Function.Tests")]
 namespace Function {
-    public class FlightBooker {
-        
-        public string BookFlight(string input)
-        {
-            return "This ran, booooo!";
-        }
+    public class FlightBooker {       
 
-        public dynamic BookFlight(string input, IHTTPContext ctx)
-        {
-            dynamic ret = BookFlight(input, ctx);
-            return ret;
-        }
-
-        public dynamic BookFlight(string input, IRuntimeContext ctx)
-        {
-            dynamic ret = BookFlight(input, ctx);
-            return ret;
-        }
-
-        internal dynamic BookFlight(string input, dynamic ctx) 
+        public dynamic BookFlight(string input, dynamic ctx) 
         {
             return (string)ctx.GetType();
+            /*
             try
             {
                 JsonSerializerOptions options = new JsonSerializerOptions { WriteIndented = true };
@@ -42,6 +26,7 @@ namespace Function {
                 JsonSerializerOptions options = new JsonSerializerOptions { WriteIndented = true };
                 return JsonSerializer.Serialize(new FlightError(), options);
             }
+            */
         }
 
         static void Main(string[] args) { Fdk.Handle(args[0]) ;}

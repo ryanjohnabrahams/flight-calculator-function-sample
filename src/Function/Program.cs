@@ -11,10 +11,16 @@ using Fnproject.Fn.Fdk.Context;
 namespace Function {
     public class FlightBooker {       
 
-        public string BookFlight(string input, IHTTPContext ctx, IRuntimeContext rCtx) 
+        public string BookFlight(string input, IHTTPContext ctx) 
         {
-            
-            return ctx.RequestMethod();//ctx.GetType();
+            string ret = "This was invoked via CLI" ;
+            if (!ctx.Equals(null))
+            {
+                ret = ctx.RequestMethod();
+                
+            }
+
+            return ret;
             /*
             try
             {

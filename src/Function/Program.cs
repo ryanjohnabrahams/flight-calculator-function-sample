@@ -11,9 +11,9 @@ using Fnproject.Fn.Fdk.Context;
 namespace Function {
     public class FlightBooker {       
 
-        public string BookFlight(string input, dynamic ctx) 
+        public dynamic BookFlight(string input)  //dynamic ctx
         {
-            return (string)ctx.GetType();
+            return "Something";//ctx.GetType();
             /*
             try
             {

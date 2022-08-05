@@ -29,11 +29,6 @@ namespace Function {
             */
         }
 
-        public string BookFlight(string input, IRuntimeContext ctx)
-        {
-            return "This function is not designed to run via CLI";
-        }
-
         static void Main(string[] args) { Fdk.Handle(args[0]) ;}
     }
 }

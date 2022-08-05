@@ -11,6 +11,11 @@ using Fnproject.Fn.Fdk.Context;
 namespace Function {
     public class FlightBooker {
         
+        public string BookFlight(string input)
+        {
+            return "This ran, booooo!";
+        }
+
         public dynamic BookFlight(string input, IHTTPContext ctx)
         {
             dynamic ret = BookFlight(input, ctx);
